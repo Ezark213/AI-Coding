@@ -20,8 +20,7 @@ AI-Coding/
 │   ├── TEMPLATE.md             # バグ修正テンプレート
 │   └── EXAMPLES.md             # バグ修正実例集
 ├── .mcp/                       # MCP設定ファイル
-│   ├── ui_copilot.mcp.json     # UI関連MCP設定
-│   └── bug_fix.mcp.json        # バグ修正MCP設定
+│   └── ui_copilot.mcp.json     # UI関連MCP設定
 ├── Templates/                   # プロジェクトテンプレート
 └── Examples/                   # 実装例
 ```
@@ -52,7 +51,6 @@ AI-Coding/
 #### 迅速なバグ修正のためのテンプレート
 - **TEMPLATE.md** - バグ修正要求の標準テンプレート
 - **EXAMPLES.md** - 実際の修正例とパターン集
-- **MCP統合** - Modern UI Rules との連携対応
 
 #### 使用方法
 ```bash
