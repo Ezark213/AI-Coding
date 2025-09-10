@@ -16,6 +16,12 @@ AI-Coding/
 ├── Workflows/                   # 開発ワークフロー
 │   ├── AddFunc-BugFix/         # 機能追加・バグ修正フロー
 │   └── MCP/                    # Master Control Program関連
+├── bug-fix/                    # バグ修正システム
+│   ├── TEMPLATE.md             # バグ修正テンプレート
+│   └── EXAMPLES.md             # バグ修正実例集
+├── .mcp/                       # MCP設定ファイル
+│   ├── ui_copilot.mcp.json     # UI関連MCP設定
+│   └── bug_fix.mcp.json        # バグ修正MCP設定
 ├── Templates/                   # プロジェクトテンプレート
 └── Examples/                   # 実装例
 ```
@@ -42,6 +48,29 @@ AI-Coding/
 - Windows MCP セットアップ
 - Serena MCP 構成
 
+### 3. シンプルバグ修正システム (bug-fix/) 🆕
+#### 迅速なバグ修正のためのテンプレート
+- **TEMPLATE.md** - バグ修正要求の標準テンプレート
+- **EXAMPLES.md** - 実際の修正例とパターン集
+- **MCP統合** - Modern UI Rules との連携対応
+
+#### 使用方法
+```bash
+claude-code "
+バグ修正してください：
+
+問題：[何が起きているか1行で]
+再現：[3ステップ以内で再現手順]
+期待：[期待する動作1行で]
+
+アプリ情報：
+[技術スタック・フレームワーク情報]
+
+エラーログ：
+[エラーメッセージがあれば]
+"
+```
+
 ## 🚀 使用方法
 
 ### 新規プロジェクト開始時
@@ -50,9 +79,15 @@ AI-Coding/
 3. プロジェクト固有の設定を調整
 
 ### 機能追加・バグ修正時
+#### 複雑な問題の場合
 1. `Workflows/AddFunc-BugFix/` の手順に従う
 2. 各フェーズでチェックリストを確認
 3. 品質基準を満たすまで繰り返し
+
+#### シンプルなバグ修正の場合 🆕
+1. `bug-fix/TEMPLATE.md` のテンプレートを使用
+2. 問題・再現・期待・技術情報を明確に記載
+3. Claude Codeで迅速に修正実行
 
 ## 💡 基本原則（抜粋）
 

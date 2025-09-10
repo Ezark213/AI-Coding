@@ -1,0 +1,56 @@
+{
+  "name": "ui-copilot",
+  "version": "1.0.0",
+  "description": "AIコード生成におけるモダンUI規則チェック用MCP設定",
+  "rules": [
+    {
+      "id": "theme-support",
+      "type": "required",
+      "pattern": ["dark", "light", "theme", "data-theme"],
+      "files": ["*.tsx", "*.jsx", "*.vue", "*.xaml"],
+      "message": "ライト/ダークテーマ切り替えのコードが不足しています。",
+      "severity": "error"
+    },
+    {
+      "id": "design-tokens",
+      "type": "recommended", 
+      "pattern": ["--", "var(", "tokens", "StaticResource"],
+      "files": ["*.css", "*.tsx", "*.jsx", "*.xaml"],
+      "message": "Design Tokens が利用されていません。直接値指定を避けてください。",
+      "severity": "warning"
+    },
+    {
+      "id": "accessibility",
+      "type": "required",
+      "pattern": ["aria-", "role=", "alt=", "AutomationProperties"],
+      "files": ["*.tsx", "*.jsx", "*.vue", "*.xaml"],
+      "message": "アクセシビリティ属性が不足しています。",
+      "severity": "error"
+    },
+    {
+      "id": "modern-components",
+      "type": "recommended",
+      "pattern": ["radix-ui", "mantine", "MahApps", "MaterialDesign"],
+      "files": ["*.tsx", "*.jsx", "*.csproj", "*.xaml"],
+      "message": "標準UIではなくモダンUIライブラリを利用してください。",
+      "severity": "info"
+    },
+    {
+      "id": "system-fonts",
+      "type": "required",
+      "pattern": ["system-ui", "Inter", "Segoe UI"],
+      "files": ["*.css", "*.xaml"],
+      "message": "システムフォントを指定してください。",
+      "severity": "warning"
+    },
+    {
+      "id": "no-default-ui",
+      "type": "forbidden",
+      "pattern": ["Button", "TextBox", "ListBox"],
+      "files": ["*.xaml"],
+      "exclude_pattern": ["Style", "Template", "StaticResource"],
+      "message": "デフォルトシステムUIの直接利用は禁止です。",
+      "severity": "error"
+    }
+  ]
+}

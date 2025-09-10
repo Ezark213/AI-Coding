@@ -1,0 +1,88 @@
+name: UI Bug Report
+description: UIに関するバグ報告
+title: "[UI Bug] "
+labels: ["bug", "ui"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        UI関連のバグを報告する際は、以下の情報を含めてください。
+
+  - type: input
+    id: component
+    attributes:
+      label: 対象コンポーネント
+      description: 問題が発生しているUIコンポーネント名
+      placeholder: "例: Button, Modal, FormInput"
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: バグの内容
+      description: 発生している問題の詳細な説明
+      placeholder: "例: ダークテーマでボタンの色が見えない"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 期待する動作
+      description: 正しく動作する場合の説明
+      placeholder: "例: ダークテーマでも適切なコントラストでボタンが表示される"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 再現手順
+      description: バグを再現するための手順
+      placeholder: |
+        1. アプリを起動
+        2. ダークテーマに切り替え
+        3. ボタンをクリック
+    validations:
+      required: true
+
+  - type: dropdown
+    id: theme
+    attributes:
+      label: テーマ
+      description: 問題が発生するテーマ
+      options:
+        - ライトテーマ
+        - ダークテーマ
+        - 両方
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: 環境
+      description: OS、解像度、DPI設定など
+      placeholder: "例: Windows 11, 1920x1080, 150% DPI"
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: スクリーンショット
+      description: 問題を示すスクリーンショットまたは動画
+      placeholder: "画像ファイルをドラッグ&ドロップしてください"
+
+  - type: checkboxes
+    id: accessibility-impact
+    attributes:
+      label: アクセシビリティへの影響
+      description: このバグがアクセシビリティに与える影響
+      options:
+        - label: キーボード操作に影響あり
+        - label: スクリーンリーダーに影響あり
+        - label: コントラスト比に影響あり
+        - label: フォーカス表示に影響あり
