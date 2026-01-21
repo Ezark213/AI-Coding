@@ -13,42 +13,99 @@ ARMA & ASSOCIATES（大野公認会計士・税理士事務所/株式会社ア�
 | 要素 | カラー名 | HEX | RGB |
 |------|----------|-----|-----|
 | **メインカラー** | ティール/シアン | **#0086AB** | **(0, 134, 171)** |
-| タイトル文字 | 青 | #0070C0 | (0, 112, 192) |
-| 本文テキスト | 濃グレー | #333333 | (51, 51, 51) |
+| タイトル文字 | ティール (accent1) | #0086AB | (0, 134, 171) |
+| 本文テキスト | ダークグレー (dk1) | **#5F5F5F** | **(95, 95, 95)** |
 | フッター | グレー | #808080 | (128, 128, 128) |
 | 背景 | 白 | #FFFFFF | (255, 255, 255) |
+
+### フォント仕様
+
+| 用途 | フォント名 |
+|------|------------|
+| **見出し（タイトル）** | **Spica Neue P Light** |
+| **本文** | **Spica Neue P** |
 
 ### サイズ仕様（正確な値・cm単位）
 
 #### スライドサイズ
-- **16:9**: 33.87cm × 19.05cm
+- **50.8cm × 28.57cm**（A3横相当）
 
 #### 左上ティール四角（スライドマスターで自動表示）
 | 項目 | 値 |
 |------|-----|
 | 幅 | **2.05cm** |
 | 高さ | **2.09cm** |
-| 位置（左） | 0.5cm |
-| 位置（上） | 0.5cm |
+| 位置（横） | **-0.04cm**（端からはみ出し） |
+| 位置（縦） | **1.64cm** |
+| 色 | #0086AB |
 
-#### スライド番号ボックス（右下）
+#### 右下エリア（2層構造）
+
+**背景四角（下層）**
+| 項目 | 値 |
+|------|-----|
+| 幅 | **2.05cm** |
+| 高さ | **2.09cm** |
+| 位置（横） | 47.34cm |
+| 位置（縦） | 26.48cm |
+| 色 | #0086AB |
+
+**スライド番号ボックス（上層）**
 | 項目 | 値 |
 |------|-----|
 | 幅 | **2.05cm** |
 | 高さ | **1.52cm** |
 | 位置（横） | 47.34cm |
 | 位置（縦） | 26.73cm |
-| 背景色 | #0086AB（ティール） |
+| 背景色 | #0086AB |
 | 文字色 | 白 |
 
 #### Copyright表記（右下、スライド番号の左隣）
 | 項目 | 値 |
 |------|-----|
-| 幅 | 約17.15cm |
-| 高さ | 1.52cm |
-| 位置 | 横29.67cm、縦26.73cm（左上隅基準・A4時） |
+| 幅 | **17.14cm** |
+| 高さ | **1.52cm** |
+| 位置（横） | 29.67cm |
+| 位置（縦） | 26.73cm |
 | フォントサイズ | 9pt |
-| 色 | グレー |
+| フォント | Spica Neue P |
+| 色 | グレー (#808080) |
+
+### 表紙スライド要素
+
+#### タイトル
+| 項目 | 値 |
+|------|-----|
+| 位置（横） | 7.3cm |
+| 位置（縦） | 10.36cm |
+| 幅 | 36.2cm |
+| 高さ | 2.99cm |
+| フォントサイズ | **48pt** |
+| フォント | **Spica Neue P Light** |
+| 色 | #0086AB |
+| スタイル | 太字、下線 |
+
+#### 会社名
+| 項目 | 値 |
+|------|-----|
+| 位置（横） | 16.83cm |
+| 位置（縦） | 19.07cm |
+| 幅 | 17.14cm |
+| 高さ | 2.65cm |
+| フォントサイズ | **28pt** |
+| フォント | **Spica Neue P** |
+| 色 | #5F5F5F |
+
+### 本編スライドタイトル
+| 項目 | 値 |
+|------|-----|
+| 位置（横） | 2.58cm |
+| 位置（縦） | 1.31cm |
+| 幅 | 46.35cm |
+| 高さ | 2.99cm |
+| フォントサイズ | **48pt** |
+| フォント | **Spica Neue P Light** |
+| 色 | #0086AB |
 
 ### スライドマスターについて
 
@@ -70,11 +127,12 @@ ARMA & ASSOCIATES（大野公認会計士・税理士事務所/株式会社ア�
 【スライドフォーマット規定】
 
 ■ デザイン仕様
-- スライドサイズ: 16:9（33.87cm × 19.05cm）
+- スライドサイズ: 50.8cm × 28.57cm（A3横相当）
 - メインカラー: ティール（#0086AB / RGB: 0, 134, 171）
-- タイトル文字: 青（#0070C0）またはティール
-- 本文テキスト: 濃グレー（#333333）
-- フォント: Spica Neue P / メイリオ / 游ゴシック
+- タイトル文字: ティール（#0086AB）
+- 本文テキスト: ダークグレー（#5F5F5F）
+- フォント（見出し）: Spica Neue P Light
+- フォント（本文）: Spica Neue P
 
 ■ 全体構成
 1. 表紙スライド
@@ -83,9 +141,9 @@ ARMA & ASSOCIATES（大野公認会計士・税理士事務所/株式会社ア�
 4. まとめ / 次のステップ
 
 ■ 共通要素（全スライド）
-- 左上: ティール色四角（2.05cm × 2.09cm）※スライドマスターで自動
-- 右下: ティール背景のスライド番号ボックス（2.05cm × 1.52cm、白文字）
-- 下部右寄せ: "Copyright© Arma & Associates, Ltd All Rights Reserved"（9pt・グレー）
+- 左上: ティール色四角（2.05cm × 2.09cm、位置: -0.04cm, 1.64cm）※スライドマスターで自動
+- 右下: 背景四角（2.05×2.09cm）+ スライド番号ボックス（2.05×1.52cm、白文字）
+- 右下: "Copyright© Arma & Associates, Ltd All Rights Reserved"（9pt・グレー・17.14×1.52cm）
 
 ■ 表紙スライドの形式
 ---
@@ -93,14 +151,14 @@ ARMA & ASSOCIATES（大野公認会計士・税理士事務所/株式会社ア�
 [左上: ティール四角 2.05×2.09cm] ※マスターから自動
 
 タイトル: ○○様△△プロジェクト キックオフ資料
-         ※ティール色（#0086AB）、太字、下線付き、48pt、中央
+         ※ティール色（#0086AB）、Spica Neue P Light、太字、下線付き、48pt、中央
 
 サブタイトル: （任意）
          ※グレー、20pt、中央
 
 会社名:  大野公認会計士・税理士事務所
          （株）アルマ
-         ※中央配置、2行、18pt
+         ※中央配置、2行、Spica Neue P、28pt
 
 [右下: スライド番号 "1"（ティール背景・白文字）]
 Copyright© Arma & Associates, Ltd All Rights Reserved
@@ -111,12 +169,12 @@ Copyright© Arma & Associates, Ltd All Rights Reserved
 【スライド2: アジェンダ】
 [左上: ティール四角] ※マスターから自動
 
-アジェンダ（ティール色・太字・イタリック・48pt）
+アジェンダ（ティール色・Spica Neue P Light・太字・イタリック・48pt）
 
 1. 項目1
 2. 項目2
 3. 項目3
-（22pt、濃グレー、行間1.2）
+（Spica Neue P、22pt、ダークグレー、行間1.2）
 
 [右下: スライド番号 "2"]
 Copyright© Arma & Associates, Ltd All Rights Reserved
@@ -127,12 +185,12 @@ Copyright© Arma & Associates, Ltd All Rights Reserved
 【スライドN: タイトル】
 [左上: ティール四角] ※マスターから自動
 
-タイトル（ティール色・太字・28-32pt）
+タイトル（ティール色・Spica Neue P Light・太字・48pt）
 
 〈本文〉
 - 箇条書きは「•」または番号を使用
 - 重要な概念は**太字**で強調
-- 18-22pt、濃グレー
+- Spica Neue P、18-22pt、ダークグレー
 
 [右下: スライド番号]
 Copyright© Arma & Associates, Ltd All Rights Reserved
@@ -201,11 +259,11 @@ Copyright© Arma & Associates, Ltd All Rights Reserved
 ```
 【スライド1: 表紙】
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-■ [2.05×2.09cm ティール四角 #0086AB]
+■ [2.05×2.09cm ティール四角 #0086AB 位置(-0.04, 1.64)cm]
 
               AI採用効率化パッケージ
               ￣￣￣￣￣￣￣￣￣￣￣￣￣
-              ※ティール(#0086AB)・下線・48pt
+              ※ティール(#0086AB)・Spica Neue P Light・下線・48pt
 
                    包括的提案書
                    ※グレー・20pt
@@ -213,7 +271,7 @@ Copyright© Arma & Associates, Ltd All Rights Reserved
 
                大野公認会計士・税理士事務所
                     （株）アルマ
-
+               ※Spica Neue P・28pt・#5F5F5F
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   Copyright© Arma & Associates, Ltd All Rights Reserved  ■1■
@@ -222,7 +280,7 @@ Copyright© Arma & Associates, Ltd All Rights Reserved
 
 【スライド2: アジェンダ】
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-■ アジェンダ ※ティール・太字・イタリック・48pt
+■ アジェンダ ※ティール・Spica Neue P Light・太字・イタリック・48pt
 
 1. エグゼクティブサマリー
 2. 採用プロセス全体像とAI活用ポイント
@@ -233,6 +291,7 @@ Copyright© Arma & Associates, Ltd All Rights Reserved
 7. PHASE 4: オファー・条件交渉の最適化
 8. PHASE 5: 追加提案
 9. まとめ
+※Spica Neue P・22pt・#5F5F5F
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   Copyright© Arma & Associates, Ltd All Rights Reserved  ■2■
@@ -250,25 +309,65 @@ from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
 
-# 正確なカラー定義
-TEAL = RGBColor(0, 134, 171)  # #0086AB
-BLUE = RGBColor(0, 112, 192)  # #0070C0
-DARK_TEXT = RGBColor(51, 51, 51)
-GRAY = RGBColor(128, 128, 128)
+# ========== 正確なカラー定義 ==========
+TEAL = RGBColor(0, 134, 171)       # #0086AB (accent1)
+DARK_TEXT = RGBColor(95, 95, 95)   # #5F5F5F (dk1)
+GRAY = RGBColor(128, 128, 128)     # #808080
 WHITE = RGBColor(255, 255, 255)
 
-# 正確なサイズ定義
+# ========== フォント定義 ==========
+FONT_TITLE = 'Spica Neue P Light'  # 見出し用
+FONT_BODY = 'Spica Neue P'         # 本文用
+
+# ========== スライドサイズ ==========
+SLIDE_WIDTH = Cm(50.8)
+SLIDE_HEIGHT = Cm(28.57)
+
+# ========== 左上ティール四角 ==========
 TEAL_SQUARE_WIDTH = Cm(2.05)
 TEAL_SQUARE_HEIGHT = Cm(2.09)
+TEAL_SQUARE_LEFT = Cm(-0.04)  # 端からはみ出し
+TEAL_SQUARE_TOP = Cm(1.64)
+
+# ========== 右下背景四角 ==========
+BG_SQUARE_WIDTH = Cm(2.05)
+BG_SQUARE_HEIGHT = Cm(2.09)
+BG_SQUARE_LEFT = Cm(47.34)
+BG_SQUARE_TOP = Cm(26.48)
+
+# ========== 右下スライド番号ボックス ==========
 SLIDE_NUM_WIDTH = Cm(2.05)
-SLIDE_NUM_HEIGHT = Cm(1.52)  # 右下は1.52cm
+SLIDE_NUM_HEIGHT = Cm(1.52)
+SLIDE_NUM_LEFT = Cm(47.34)
+SLIDE_NUM_TOP = Cm(26.73)
 
-# タイトルフォントサイズ
+# ========== Copyright ==========
+COPYRIGHT_WIDTH = Cm(17.14)
+COPYRIGHT_HEIGHT = Cm(1.52)
+COPYRIGHT_LEFT = Cm(29.67)
+COPYRIGHT_TOP = Cm(26.73)
+
+# ========== タイトル ==========
 TITLE_FONT_SIZE = Pt(48)
+COMPANY_FONT_SIZE = Pt(28)
 
-# スライドサイズ（16:9）
-# prs.slide_width = Inches(13.333)  # 33.87cm
-# prs.slide_height = Inches(7.5)    # 19.05cm
+# ========== 表紙タイトル位置 ==========
+COVER_TITLE_LEFT = Cm(7.3)
+COVER_TITLE_TOP = Cm(10.36)
+COVER_TITLE_WIDTH = Cm(36.2)
+COVER_TITLE_HEIGHT = Cm(2.99)
+
+# ========== 会社名位置 ==========
+COMPANY_LEFT = Cm(16.83)
+COMPANY_TOP = Cm(19.07)
+COMPANY_WIDTH = Cm(17.14)
+COMPANY_HEIGHT = Cm(2.65)
+
+# ========== 本編タイトル位置 ==========
+CONTENT_TITLE_LEFT = Cm(2.58)
+CONTENT_TITLE_TOP = Cm(1.31)
+CONTENT_TITLE_WIDTH = Cm(46.35)
+CONTENT_TITLE_HEIGHT = Cm(2.99)
 ```
 
 ---
@@ -278,15 +377,16 @@ TITLE_FONT_SIZE = Pt(48)
 ### スライドマスターの設定方法
 
 1. PowerPoint「表示」→「スライドマスター」
-2. 左上にティール四角（2.05×2.09cm）を配置
-3. 右下にスライド番号ボックス（2.05×2.09cm）を配置
-4. 下部にCopyright表記を配置
+2. 左上にティール四角（2.05×2.09cm、位置: -0.04cm, 1.64cm）を配置
+3. 右下に背景四角（2.05×2.09cm）とスライド番号ボックス（2.05×1.52cm）を配置
+4. 下部にCopyright表記（17.14×1.52cm、位置: 29.67cm, 26.73cm）を配置
 5. マスターを閉じると全スライドに自動適用
 
 ### フォント設定
 
-- タイトル: Spica Neue P Light 見出し / メイリオ
-- 本文: Spica Neue P 本文 / メイリオ
+- タイトル: **Spica Neue P Light**
+- 本文: **Spica Neue P**
+- フォールバック: メイリオ / 游ゴシック
 
 ---
 
@@ -298,7 +398,8 @@ TITLE_FONT_SIZE = Pt(48)
 | 1.1.0 | 2025-01-21 | Wizleapスタイルに合わせて更新 |
 | 1.2.0 | 2025-01-21 | サイズ仕様をcm単位で詳細化 |
 | 1.3.0 | 2025-01-21 | 正確なカラー(#0086AB)・サイズ(2.05×2.09cm)に修正 |
-| **1.4.0** | **2026-01-21** | **右下ボックス高さ修正(1.52cm)、見出し48ptに修正** |
+| 1.4.0 | 2026-01-21 | 右下ボックス高さ修正(1.52cm)、見出し48ptに修正 |
+| **1.5.0** | **2026-01-21** | **元ファイル完全準拠: スライドサイズ(50.8×28.57cm)、会社名28pt、フォント(Spica Neue P)、全位置情報、右下2層構造、本文色(#5F5F5F)** |
 
 ---
 
