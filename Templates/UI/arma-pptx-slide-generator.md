@@ -399,7 +399,337 @@ CONTENT_TITLE_HEIGHT = Cm(2.99)
 | 1.2.0 | 2025-01-21 | サイズ仕様をcm単位で詳細化 |
 | 1.3.0 | 2025-01-21 | 正確なカラー(#0086AB)・サイズ(2.05×2.09cm)に修正 |
 | 1.4.0 | 2026-01-21 | 右下ボックス高さ修正(1.52cm)、見出し48ptに修正 |
-| **1.5.0** | **2026-01-21** | **元ファイル完全準拠: スライドサイズ(50.8×28.57cm)、会社名28pt、フォント(Spica Neue P)、全位置情報、右下2層構造、本文色(#5F5F5F)** |
+| 1.5.0 | 2026-01-21 | 元ファイル完全準拠: スライドサイズ(50.8×28.57cm)、会社名28pt、フォント(Spica Neue P)、全位置情報、右下2層構造、本文色(#5F5F5F) |
+| **1.6.0** | **2026-01-28** | **モダンカードデザイン追加、左上四角を全スライド統一、コピーライト位置修正（右下右寄せ）** |
+
+---
+
+## Modern Card Design（モダンカードデザイン）
+
+v1.6.0で追加されたモダンなカードデザイン仕様です。白背景で視覚的に見やすいレイアウトを実現します。
+
+### 追加カラー定義
+
+| 要素 | カラー名 | HEX | RGB |
+|------|----------|-----|-----|
+| カード背景 | ライトグレー | #F5F7FA | (245, 247, 250) |
+| カード枠線 | ボーダーグレー | #DCE1E6 | (220, 225, 230) |
+| アクセント線 | ライトブルー | #00B0F0 | (0, 176, 240) |
+
+### モダンカード要素
+
+```
+┌─────────────────────────────────────┐
+│  ┌──┐                               │
+│  │01│  カードタイトル               │ ← ティール色・太字
+│  └──┘  ────────────────────────     │
+│        説明テキスト                 │ ← ダークグレー
+│                                     │
+└─────────────────────────────────────┘
+  ↑ 背景: #F5F7FA / 枠線: #DCE1E6
+```
+
+### カードサイズ仕様
+
+| 項目 | 値 |
+|------|-----|
+| カード幅 | 20cm |
+| カード高さ | 4.5cm |
+| 番号サークル | 1.8cm × 1.8cm |
+| 角丸半径 | 0.3cm |
+| カード間隔（横） | 2cm |
+| カード間隔（縦） | 1cm |
+
+### 2列×3行レイアウト
+
+アジェンダスライドでは、6項目を2列×3行のカードで配置：
+
+```
+┌────────────────────┐  ┌────────────────────┐
+│  (1) 項目1         │  │  (2) 項目2         │
+└────────────────────┘  └────────────────────┘
+┌────────────────────┐  ┌────────────────────┐
+│  (3) 項目3         │  │  (4) 項目4         │
+└────────────────────┘  └────────────────────┘
+┌────────────────────┐  ┌────────────────────┐
+│  (5) 項目5         │  │  (6) 項目6         │
+└────────────────────┘  └────────────────────┘
+```
+
+---
+
+## Python生成コード（モダン版 v1.6.0）
+
+```python
+# -*- coding: utf-8 -*-
+"""
+ARMA & ASSOCIATES PowerPoint Generator - Modern Card Design v1.6.0
+"""
+
+from pptx import Presentation
+from pptx.util import Cm, Pt
+from pptx.dml.color import RGBColor
+from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
+from pptx.enum.shapes import MSO_SHAPE
+import os
+
+# === デザイン設定 ===
+PRIMARY_COLOR = RGBColor(0, 134, 171)      # ティール #0086AB
+LIGHT_BLUE = RGBColor(0, 176, 240)         # 薄い水色（アクセント）
+TEXT_COLOR = RGBColor(95, 95, 95)          # ダークグレー #5F5F5F
+FOOTER_COLOR = RGBColor(128, 128, 128)     # グレー #808080
+WHITE = RGBColor(255, 255, 255)
+LIGHT_GRAY = RGBColor(245, 247, 250)       # 薄いグレー（カード背景）
+CARD_BORDER = RGBColor(220, 225, 230)      # カード枠線
+
+# スライドサイズ（A3横）
+SLIDE_WIDTH = Cm(50.8)
+SLIDE_HEIGHT = Cm(28.57)
+
+# 右下の四角サイズ（幅2.05cm、高さ2.09cm）
+NUM_BOX_WIDTH = Cm(2.05)
+NUM_BOX_HEIGHT = Cm(2.09)
+
+# 左上の四角（全スライド共通）
+LEFT_BOX_X = Cm(-0.04)
+LEFT_BOX_Y = Cm(1.64)
+LEFT_BOX_W = Cm(2.05)
+LEFT_BOX_H = Cm(2.09)
+
+
+def create_presentation():
+    prs = Presentation()
+    prs.slide_width = SLIDE_WIDTH
+    prs.slide_height = SLIDE_HEIGHT
+    return prs
+
+
+def add_common_elements(slide, slide_num):
+    """全スライド共通の要素を追加"""
+    # 左上のティール四角（全スライド共通サイズ）
+    left_box = slide.shapes.add_shape(
+        MSO_SHAPE.RECTANGLE,
+        LEFT_BOX_X, LEFT_BOX_Y,
+        LEFT_BOX_W, LEFT_BOX_H
+    )
+    left_box.fill.solid()
+    left_box.fill.fore_color.rgb = PRIMARY_COLOR
+    left_box.line.fill.background()
+
+    # コピーライト（右下、スライド番号の左側・右寄せ）
+    copyright_box = slide.shapes.add_textbox(
+        Cm(27), Cm(26.3), Cm(18), Cm(1)
+    )
+    tf = copyright_box.text_frame
+    p = tf.paragraphs[0]
+    p.text = "Copyright© Arma & Asocciates, Ltd All Rights Reserved"
+    p.font.size = Pt(10)
+    p.font.color.rgb = FOOTER_COLOR
+    p.alignment = PP_ALIGN.RIGHT
+
+    # 右下のスライド番号ボックス
+    num_box = slide.shapes.add_shape(
+        MSO_SHAPE.RECTANGLE,
+        SLIDE_WIDTH - NUM_BOX_WIDTH - Cm(0.5),
+        SLIDE_HEIGHT - NUM_BOX_HEIGHT - Cm(0.5),
+        NUM_BOX_WIDTH,
+        NUM_BOX_HEIGHT
+    )
+    num_box.fill.solid()
+    num_box.fill.fore_color.rgb = PRIMARY_COLOR
+    num_box.line.fill.background()
+
+    tf = num_box.text_frame
+    tf.clear()
+    tf.anchor = MSO_ANCHOR.MIDDLE
+    p = tf.paragraphs[0]
+    p.text = str(slide_num)
+    p.font.size = Pt(16)
+    p.font.bold = True
+    p.font.color.rgb = WHITE
+    p.alignment = PP_ALIGN.CENTER
+
+
+def add_cover_slide(prs, title, subtitle):
+    """表紙スライド（モダンデザイン）"""
+    blank_layout = prs.slide_layouts[6]
+    slide = prs.slides.add_slide(blank_layout)
+
+    add_common_elements(slide, 1)
+
+    # タイトル（中央、ティール色）
+    title_box = slide.shapes.add_textbox(
+        Cm(5), Cm(9), Cm(40), Cm(3)
+    )
+    tf = title_box.text_frame
+    p = tf.paragraphs[0]
+    p.text = title
+    p.font.size = Pt(44)
+    p.font.bold = True
+    p.font.color.rgb = PRIMARY_COLOR
+    p.alignment = PP_ALIGN.CENTER
+
+    # タイトル下の水色アクセントライン
+    line = slide.shapes.add_shape(
+        MSO_SHAPE.RECTANGLE,
+        Cm(10), Cm(12.5), Cm(30), Cm(0.12)
+    )
+    line.fill.solid()
+    line.fill.fore_color.rgb = LIGHT_BLUE
+    line.line.fill.background()
+
+    # サブタイトル
+    sub_box = slide.shapes.add_textbox(
+        Cm(5), Cm(13.5), Cm(40), Cm(2)
+    )
+    tf = sub_box.text_frame
+    p = tf.paragraphs[0]
+    p.text = subtitle
+    p.font.size = Pt(18)
+    p.font.color.rgb = TEXT_COLOR
+    p.alignment = PP_ALIGN.CENTER
+
+    # 会社名（中央下）
+    company_box = slide.shapes.add_textbox(
+        Cm(5), Cm(18), Cm(40), Cm(4)
+    )
+    tf = company_box.text_frame
+    p = tf.paragraphs[0]
+    p.text = "大野公認会計士・税理士事務所"
+    p.font.size = Pt(18)
+    p.font.color.rgb = TEXT_COLOR
+    p.alignment = PP_ALIGN.CENTER
+
+    p2 = tf.add_paragraph()
+    p2.text = "（株）アルマ"
+    p2.font.size = Pt(18)
+    p2.font.color.rgb = TEXT_COLOR
+    p2.alignment = PP_ALIGN.CENTER
+
+    return slide
+
+
+def add_card(slide, x, y, width, height, number, title, description):
+    """モダンなカード要素を追加"""
+    # カード背景（角丸）
+    card = slide.shapes.add_shape(
+        MSO_SHAPE.ROUNDED_RECTANGLE,
+        x, y, width, height
+    )
+    card.fill.solid()
+    card.fill.fore_color.rgb = LIGHT_GRAY
+    card.line.color.rgb = CARD_BORDER
+    card.line.width = Pt(1)
+
+    # 番号サークル
+    circle = slide.shapes.add_shape(
+        MSO_SHAPE.OVAL,
+        x + Cm(0.8), y + Cm(0.6),
+        Cm(1.8), Cm(1.8)
+    )
+    circle.fill.solid()
+    circle.fill.fore_color.rgb = PRIMARY_COLOR
+    circle.line.fill.background()
+
+    tf = circle.text_frame
+    tf.clear()
+    tf.anchor = MSO_ANCHOR.MIDDLE
+    p = tf.paragraphs[0]
+    p.text = str(number)
+    p.font.size = Pt(16)
+    p.font.bold = True
+    p.font.color.rgb = WHITE
+    p.alignment = PP_ALIGN.CENTER
+
+    # タイトル
+    title_box = slide.shapes.add_textbox(
+        x + Cm(3.2), y + Cm(0.6),
+        width - Cm(4), Cm(1.5)
+    )
+    tf = title_box.text_frame
+    p = tf.paragraphs[0]
+    p.text = title
+    p.font.size = Pt(18)
+    p.font.bold = True
+    p.font.color.rgb = PRIMARY_COLOR
+
+    # 説明文
+    if description:
+        desc_box = slide.shapes.add_textbox(
+            x + Cm(3.2), y + Cm(2.2),
+            width - Cm(4), Cm(2)
+        )
+        tf = desc_box.text_frame
+        tf.word_wrap = True
+        p = tf.paragraphs[0]
+        p.text = description
+        p.font.size = Pt(12)
+        p.font.color.rgb = TEXT_COLOR
+
+
+def add_agenda_slide(prs, items):
+    """目次スライド（モダンカードデザイン）"""
+    blank_layout = prs.slide_layouts[6]
+    slide = prs.slides.add_slide(blank_layout)
+
+    add_common_elements(slide, 2)
+
+    # タイトル
+    title_box = slide.shapes.add_textbox(
+        Cm(3), Cm(2), Cm(44), Cm(2.5)
+    )
+    tf = title_box.text_frame
+    p = tf.paragraphs[0]
+    p.text = "本日お話しすること"
+    p.font.size = Pt(32)
+    p.font.bold = True
+    p.font.color.rgb = PRIMARY_COLOR
+
+    # カード配置（2列 x 3行）
+    card_width = Cm(20)
+    card_height = Cm(4.5)
+    start_x = Cm(4)
+    start_y = Cm(5.5)
+    gap_x = Cm(22)
+    gap_y = Cm(5.5)
+
+    for i, (num, title, desc) in enumerate(items):
+        col = i % 2
+        row = i // 2
+        x = start_x + (col * gap_x)
+        y = start_y + (row * gap_y)
+        add_card(slide, x, y, card_width, card_height, num, title, desc)
+
+    return slide
+
+
+# === 使用例 ===
+if __name__ == "__main__":
+    prs = create_presentation()
+
+    # 表紙
+    add_cover_slide(
+        prs,
+        "Microsoft 365 導入のご提案",
+        "〜 会社の「働き方」をアップグレードしませんか？ 〜"
+    )
+
+    # 目次（6項目のカード）
+    agenda_items = [
+        ("1", "御社の「もったいない」状況", "情報散在・属人化の現状分析"),
+        ("2", "M365で何ができるか", "主要機能と活用イメージ"),
+        ("3", "導入メリット", "時間・コスト・リスクの改善"),
+        ("4", "他社との違い", "当社サービスの強み"),
+        ("5", "費用とスケジュール", "3ヶ月200万円の内訳"),
+        ("6", "なぜ今か", "AI時代への準備"),
+    ]
+    add_agenda_slide(prs, agenda_items)
+
+    # 保存
+    output_path = os.path.join(os.path.expanduser("~"), "Downloads", "output.pptx")
+    prs.save(output_path)
+    print(f"Saved: {output_path}")
+```
 
 ---
 
