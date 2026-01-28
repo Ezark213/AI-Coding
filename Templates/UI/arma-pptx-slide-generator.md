@@ -4,6 +4,372 @@
 
 ARMA & ASSOCIATES（大野公認会計士・税理士事務所/株式会社アルマ）向けのプロジェクト資料・プレゼンテーションスライド原稿を生成するためのプロンプトテンプレートです。
 
+**対応する提案書の種類：**
+- IT導入提案（Microsoft 365、RPA、AI、クラウドなど）
+- 業務改善提案（DX推進、業務効率化など）
+- コンサルティング提案（経営支援、会計・税務など）
+- 補助金・助成金提案
+- その他のビジネス提案全般
+
+---
+
+## Business Proposal Template（汎用ビジネス提案書テンプレート）
+
+v1.9.0で追加された、あらゆるビジネス提案に使える汎用テンプレートです。
+
+### スライド構成（推奨20枚構成）
+
+| No. | スライド種別 | 内容 | 視覚要素 |
+|-----|-------------|------|---------|
+| 1 | 表紙 | 提案タイトル、サブタイトル、会社名 | タイトル＋アクセントライン |
+| 2 | エグゼクティブサマリー | 課題・解決策・費用・効果・なぜ当社（5項目） | ラベル付きリスト |
+| 3 | アジェンダ | 本日の内容（7項目程度） | 番号付きリスト |
+| 4 | 現状課題（概要） | 主要な課題を概観（4項目推奨） | 2×2カード |
+| 5-8 | 課題詳細×4 | 各課題を1枚ずつ深掘り（数値・根拠付き） | KPIボックス |
+| 9 | 解決策（概要） | 提案するソリューションの全体像 | 機能カード |
+| 10 | 解決策（詳細/費用） | 具体的な内容、ライセンス費用など | 価格表 |
+| 11 | 導入効果①（KPI） | 期待できる効果を数値で示す | KPIボックス×3-4 |
+| 12 | 導入効果②（Before/After） | 導入前後の変化を対比 | Before/After表 |
+| 13 | 競合比較①（一覧） | 競合他社との比較表 | 比較表 |
+| 14 | 競合比較②（詳細） | なぜ当社を選ぶべきかの論点 | 論破ポイント |
+| 15 | 費用詳細 | 見積り内訳と作業内容 | 費用内訳表 |
+| 16 | スケジュール | 導入までのタイムライン | ガントチャート |
+| 17 | プロジェクト体制 | 役割分担と責任範囲 | 体制図 |
+| 18 | なぜ今か | 導入タイミングの重要性（3理由） | アイコン付きリスト |
+| 19 | 次のステップ | 具体的なアクション（3ステップ）＋CTA | プロセスフロー |
+| 20 | お問い合わせ | 連絡先、謝辞 | 連絡先情報 |
+
+---
+
+### フォントサイズガイドライン（大きく見やすく）
+
+| 要素 | 推奨サイズ | 最小サイズ |
+|------|-----------|-----------|
+| スライドタイトル | 36pt | 32pt |
+| サブタイトル | 24pt | 22pt |
+| 本文テキスト | 22pt | 20pt |
+| 表のセル | 20pt | 18pt |
+| 注釈・出典 | 18pt | 14pt |
+| KPI数値 | 40-44pt | 36pt |
+
+---
+
+### エグゼクティブサマリーの構成
+
+経営層向け提案の冒頭に必ず入れる「3分で要点がわかる」スライド。
+
+```
+┌──────────┬──────────────────────────────────────────────┐
+│  課題    │ [顧客が抱える主要な課題を1文で]              │ ← 赤ラベル
+├──────────┼──────────────────────────────────────────────┤
+│  解決策  │ [提案するソリューションを1文で]              │ ← ティールラベル
+├──────────┼──────────────────────────────────────────────┤
+│  費用    │ [概算費用と期間]                             │ ← オレンジラベル
+├──────────┼──────────────────────────────────────────────┤
+│  効果    │ [期待できる効果を数値で]                     │ ← 緑ラベル
+├──────────┼──────────────────────────────────────────────┤
+│ なぜ当社 │ [競合優位性を1文で]                          │ ← 紫ラベル
+└──────────┴──────────────────────────────────────────────┘
+```
+
+---
+
+### 課題詳細スライドの構成
+
+各課題を1枚で深掘りする。**必ず数値や根拠を入れる**。
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ 課題①：[課題タイトル]                                      │ ← 36pt
+│ [サブタイトル：インパクトのある数値や事実]                   │ ← 20pt
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  ● [具体的な事実1]                         ┌─────────────┐ │
+│  ● [具体的な事実2]                         │   数値     │ │
+│  ● [具体的な事実3]                         │  ハイライト │ │
+│  ● [具体的な事実4]                         │   ボックス │ │
+│                                            └─────────────┘ │
+│                                                             │
+│  出典：[信頼できるソース]                                   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### 競合比較スライドの構成
+
+**論破ポイントを明確に**示す。
+
+```
+┌──────────────┬────────────────┬────────────────┬──────────────┐
+│    項目      │    競合A       │    競合B       │  当社(強調)  │
+├──────────────┼────────────────┼────────────────┼──────────────┤
+│  費用        │  高い          │  中程度        │  ★最安      │
+│  対応速度    │  遅い          │  普通          │  ★最速      │
+│  専門性      │  IT中心        │  〇〇中心      │  ★両面対応  │
+│  導入後支援  │  別途契約      │  パッケージ    │  ★込み      │
+└──────────────┴────────────────┴────────────────┴──────────────┘
+                                                   ↑ 薄水色背景で強調
+
+┌─────────────────────────────────────────────────────────────┐
+│ ✓ 論破ポイント1  ✓ 論破ポイント2  ✓ 論破ポイント3          │ ← 結論ボックス
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### プロンプト例（汎用ビジネス提案書）
+
+```markdown
+あなたはARMA & ASSOCIATES（大野公認会計士・税理士事務所/株式会社アルマ）の
+ビジネス提案書を作成するアシスタントです。
+
+【提案情報】
+- 提案タイトル：[例：〇〇システム導入のご提案]
+- 顧客名：[例：株式会社〇〇様]
+- 提案テーマ：[例：業務効率化、DX推進、コスト削減など]
+- 概算費用：[例：200万円（3ヶ月）]
+- 主な競合：[例：大手SIer、通信キャリアなど]
+
+【顧客の課題（4つ）】
+1. [課題1：例「情報が散らばっている」]
+2. [課題2：例「属人化している」]
+3. [課題3：例「ツールがバラバラ」]
+4. [課題4：例「セキュリティが不安」]
+
+【提案する解決策】
+- [ソリューション名]
+- [主要機能・サービス内容]
+
+【期待効果（KPI）】
+- [効果1：例「年間150時間の時間創出」]
+- [効果2：例「管理工数30%削減」]
+- [効果3：例「セキュリティリスク低減」]
+
+【競合との差別化ポイント】
+- [ポイント1：例「費用が30-40%安い」]
+- [ポイント2：例「対応速度が速い」]
+- [ポイント3：例「会計×ITの両面から提案」]
+- [ポイント4：例「伴走支援込み」]
+
+【なぜ今か（3つ）】
+1. [理由1：例「AI時代への準備」]
+2. [理由2：例「人手不足時代の備え」]
+3. [理由3：例「補助金の活用」]
+
+上記情報をもとに、20枚構成のビジネス提案書スライドを作成してください。
+フォントサイズは20pt以上を維持し、視覚的な要素（表、図、KPIボックスなど）を
+多用して、経営層にも伝わりやすい構成にしてください。
+```
+
+---
+
+### Python生成コード（汎用テンプレート）
+
+```python
+# -*- coding: utf-8 -*-
+"""
+ARMA & ASSOCIATES - 汎用ビジネス提案書テンプレート
+任意の提案テーマに対応可能な20枚構成
+"""
+
+from pptx import Presentation
+from pptx.util import Cm, Pt
+from pptx.dml.color import RGBColor
+from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
+from pptx.enum.shapes import MSO_SHAPE
+import os
+
+# === カラーパレット ===
+PRIMARY = RGBColor(0, 134, 171)      # ティール（メイン）
+LIGHT_BLUE = RGBColor(0, 176, 240)   # 水色（アクセント）
+ORANGE = RGBColor(237, 125, 49)      # オレンジ（強調、ガント）
+GREEN = RGBColor(112, 173, 71)       # 緑（After、ポジティブ）
+RED = RGBColor(192, 0, 0)            # 赤（Before、課題、警告）
+PURPLE = RGBColor(112, 48, 160)      # 紫（差別化）
+TEXT = RGBColor(95, 95, 95)          # ダークグレー（本文）
+GRAY = RGBColor(128, 128, 128)       # グレー（注釈）
+WHITE = RGBColor(255, 255, 255)
+LIGHT_GRAY = RGBColor(245, 247, 250) # カード背景
+BORDER = RGBColor(220, 225, 230)     # 枠線
+ALT_ROW = RGBColor(240, 248, 250)    # 交互行
+
+# === スライドサイズ ===
+SLIDE_WIDTH = Cm(50.8)
+SLIDE_HEIGHT = Cm(28.57)
+
+# === 共通要素 ===
+def add_common_elements(slide, slide_num):
+    """左上四角、コピーライト、スライド番号を追加"""
+    # 左上ティール四角
+    left = slide.shapes.add_shape(
+        MSO_SHAPE.RECTANGLE, Cm(-0.04), Cm(1.64), Cm(2.05), Cm(2.09)
+    )
+    left.fill.solid()
+    left.fill.fore_color.rgb = PRIMARY
+    left.line.fill.background()
+
+    # コピーライト
+    cr = slide.shapes.add_textbox(Cm(27), Cm(26.3), Cm(18), Cm(1))
+    cr.text_frame.paragraphs[0].text = "Copyright© Arma & Asocciates, Ltd All Rights Reserved"
+    cr.text_frame.paragraphs[0].font.size = Pt(12)
+    cr.text_frame.paragraphs[0].font.color.rgb = GRAY
+    cr.text_frame.paragraphs[0].alignment = PP_ALIGN.RIGHT
+
+    # スライド番号
+    num = slide.shapes.add_shape(
+        MSO_SHAPE.RECTANGLE,
+        SLIDE_WIDTH - Cm(2.55), SLIDE_HEIGHT - Cm(2.59),
+        Cm(2.05), Cm(2.09)
+    )
+    num.fill.solid()
+    num.fill.fore_color.rgb = PRIMARY
+    num.line.fill.background()
+    num.text_frame.anchor = MSO_ANCHOR.MIDDLE
+    num.text_frame.paragraphs[0].text = str(slide_num)
+    num.text_frame.paragraphs[0].font.size = Pt(18)
+    num.text_frame.paragraphs[0].font.bold = True
+    num.text_frame.paragraphs[0].font.color.rgb = WHITE
+    num.text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+
+
+def add_slide_title(slide, title, subtitle=None):
+    """スライドタイトルを追加"""
+    tb = slide.shapes.add_textbox(Cm(3), Cm(2), Cm(44), Cm(2.5))
+    tb.text_frame.paragraphs[0].text = title
+    tb.text_frame.paragraphs[0].font.size = Pt(36)
+    tb.text_frame.paragraphs[0].font.bold = True
+    tb.text_frame.paragraphs[0].font.color.rgb = PRIMARY
+
+    if subtitle:
+        sb = slide.shapes.add_textbox(Cm(3), Cm(4.2), Cm(44), Cm(1.5))
+        sb.text_frame.paragraphs[0].text = subtitle
+        sb.text_frame.paragraphs[0].font.size = Pt(20)
+        sb.text_frame.paragraphs[0].font.color.rgb = TEXT
+
+
+def add_kpi_box(slide, x, y, value, label, color):
+    """KPIハイライトボックスを追加"""
+    box = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, y, Cm(12), Cm(10))
+    box.fill.solid()
+    box.fill.fore_color.rgb = LIGHT_GRAY
+    box.line.color.rgb = color
+    box.line.width = Pt(4)
+
+    val = slide.shapes.add_textbox(x, y + Cm(1), Cm(12), Cm(4))
+    val.text_frame.paragraphs[0].text = value
+    val.text_frame.paragraphs[0].font.size = Pt(44)
+    val.text_frame.paragraphs[0].font.bold = True
+    val.text_frame.paragraphs[0].font.color.rgb = color
+    val.text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+
+    lbl = slide.shapes.add_textbox(x, y + Cm(5.5), Cm(12), Cm(4))
+    lbl.text_frame.word_wrap = True
+    lbl.text_frame.paragraphs[0].text = label
+    lbl.text_frame.paragraphs[0].font.size = Pt(20)
+    lbl.text_frame.paragraphs[0].font.color.rgb = TEXT
+    lbl.text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+
+
+def add_comparison_table(slide, headers, rows, x, y, col_widths):
+    """比較表を追加"""
+    # ヘッダー
+    for i, (h, w) in enumerate(zip(headers, col_widths)):
+        cx = x + sum(col_widths[:i])
+        hd = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, cx, y, w, Cm(2.5))
+        hd.fill.solid()
+        hd.fill.fore_color.rgb = PRIMARY
+        hd.line.fill.background()
+        hd.text_frame.anchor = MSO_ANCHOR.MIDDLE
+        hd.text_frame.paragraphs[0].text = h
+        hd.text_frame.paragraphs[0].font.size = Pt(18)
+        hd.text_frame.paragraphs[0].font.bold = True
+        hd.text_frame.paragraphs[0].font.color.rgb = WHITE
+        hd.text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+
+    # データ行
+    for ri, row in enumerate(rows):
+        ry = y + Cm(2.5) + ri * Cm(2.8)
+        is_highlight = (ri == len(rows) - 1)  # 最後の行（当社）を強調
+        for ci, (cell, w) in enumerate(zip(row, col_widths)):
+            cx = x + sum(col_widths[:ci])
+            cl = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, cx, ry, w, Cm(2.6))
+            cl.fill.solid()
+            if is_highlight:
+                cl.fill.fore_color.rgb = RGBColor(230, 247, 250)
+            elif ri % 2 == 0:
+                cl.fill.fore_color.rgb = ALT_ROW
+            else:
+                cl.fill.fore_color.rgb = WHITE
+            cl.line.color.rgb = BORDER
+            cl.text_frame.anchor = MSO_ANCHOR.MIDDLE
+            cl.text_frame.paragraphs[0].text = cell
+            cl.text_frame.paragraphs[0].font.size = Pt(18)
+            cl.text_frame.paragraphs[0].font.color.rgb = PRIMARY if is_highlight else TEXT
+            cl.text_frame.paragraphs[0].font.bold = is_highlight
+            cl.text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+
+
+def add_gantt_chart(slide, tasks, x, y, col_widths):
+    """ガントチャートを追加"""
+    # tasks = [(タスク名, 開始月, 終了月), ...]
+    headers = ["タスク", "1ヶ月目", "2ヶ月目", "3ヶ月目"]
+    for i, (h, w) in enumerate(zip(headers, col_widths)):
+        cx = x + sum(col_widths[:i])
+        hd = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, cx, y, w, Cm(2.5))
+        hd.fill.solid()
+        hd.fill.fore_color.rgb = PRIMARY if i == 0 else LIGHT_BLUE
+        hd.line.fill.background()
+        hd.text_frame.anchor = MSO_ANCHOR.MIDDLE
+        hd.text_frame.paragraphs[0].text = h
+        hd.text_frame.paragraphs[0].font.size = Pt(20)
+        hd.text_frame.paragraphs[0].font.bold = True
+        hd.text_frame.paragraphs[0].font.color.rgb = WHITE
+        hd.text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+
+    for ti, (task, start, end) in enumerate(tasks):
+        ty = y + Cm(2.5) + ti * Cm(3)
+        # タスク名
+        tk = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, x, ty, col_widths[0], Cm(2.8))
+        tk.fill.solid()
+        tk.fill.fore_color.rgb = WHITE
+        tk.line.color.rgb = BORDER
+        tk.text_frame.anchor = MSO_ANCHOR.MIDDLE
+        tk.text_frame.margin_left = Cm(0.3)
+        tk.text_frame.paragraphs[0].text = task
+        tk.text_frame.paragraphs[0].font.size = Pt(18)
+        tk.text_frame.paragraphs[0].font.color.rgb = TEXT
+
+        # ガントバー
+        bar_x = x + col_widths[0] + start * col_widths[1]
+        bar_w = (end - start) * col_widths[1]
+        bar = slide.shapes.add_shape(
+            MSO_SHAPE.CHEVRON, bar_x + Cm(0.3), ty + Cm(0.5),
+            bar_w - Cm(0.6), Cm(1.8)
+        )
+        bar.fill.solid()
+        bar.fill.fore_color.rgb = ORANGE
+        bar.line.fill.background()
+
+
+def add_org_chart(slide, boxes):
+    """体制図を追加"""
+    # boxes = [(x, y, w, h, text, border_color), ...]
+    for x, y, w, h, text, color in boxes:
+        bx = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, x, y, w, h)
+        bx.fill.solid()
+        bx.fill.fore_color.rgb = WHITE
+        bx.line.color.rgb = color
+        bx.line.width = Pt(3)
+        bx.text_frame.anchor = MSO_ANCHOR.MIDDLE
+        bx.text_frame.word_wrap = True
+        bx.text_frame.paragraphs[0].text = text
+        bx.text_frame.paragraphs[0].font.size = Pt(20)
+        bx.text_frame.paragraphs[0].font.bold = True
+        bx.text_frame.paragraphs[0].font.color.rgb = TEXT
+        bx.text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+```
+
 ---
 
 ## Design Specification（デザイン仕様）
@@ -402,7 +768,8 @@ CONTENT_TITLE_HEIGHT = Cm(2.99)
 | 1.5.0 | 2026-01-21 | 元ファイル完全準拠: スライドサイズ(50.8×28.57cm)、会社名28pt、フォント(Spica Neue P)、全位置情報、右下2層構造、本文色(#5F5F5F) |
 | 1.6.0 | 2026-01-28 | モダンカードデザイン追加、左上四角を全スライド統一、コピーライト位置修正（右下右寄せ） |
 | 1.7.0 | 2026-01-28 | 図解テンプレート追加（体制図・ガントチャート・比較表）、M365提案書フルテンプレート追加 |
-| **1.8.0** | **2026-01-28** | **視覚要素拡充（用語定義表・KPIボックス・Before/After・プロセスフロー・アイコンリスト）** |
+| 1.8.0 | 2026-01-28 | 視覚要素拡充（用語定義表・KPIボックス・Before/After・プロセスフロー・アイコンリスト） |
+| **1.9.0** | **2026-01-28** | **汎用ビジネス提案書テンプレート追加（20枚構成、任意のテーマに対応、フォントサイズ20pt以上、プロンプト例、Python関数）** |
 
 ---
 
