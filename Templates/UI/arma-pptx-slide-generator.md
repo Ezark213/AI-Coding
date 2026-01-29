@@ -44,8 +44,8 @@ prs.slide_height = Cm(28.57)
 │                                                                         │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                            Copyright...（右寄せ）              ■ 1 ■    │
-│                            pos: 29.67cm, 26.73cm               (右下)   │
-│                            17.14×1.52cm                    47.34, 26.48cm│
+│                            pos: 27.0cm, 26.3cm                 (右下)   │
+│                            18.0×1.0cm                      48.25, 25.98cm│
 │                                                            2.05×2.09cm  │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
@@ -55,16 +55,16 @@ prs.slide_height = Cm(28.57)
 | 要素 | 位置 (left, top) | サイズ (W×H) | 色 | フォント |
 |------|------------------|--------------|-----|----------|
 | **左上ティール四角** | **-0.04cm, 1.64cm** | **2.05cm × 2.09cm** | #0086AB | - |
-| **コピーライト** | **29.67cm, 26.73cm** | **17.14cm × 1.52cm** | #808080 | 9pt, 右寄せ |
-| **右下ティール四角** | **47.34cm, 26.48cm** | **2.05cm × 2.09cm** | #0086AB | - |
-| **スライド番号（四角内）** | 47.34cm, 26.73cm | 2.05cm × 1.52cm | 白文字 | 18pt, 中央 |
+| **コピーライト** | **27.0cm, 26.3cm** | **18.0cm × 1.0cm** | #808080 | 12pt, 右寄せ |
+| **右下ティール四角** | **48.25cm, 25.98cm** | **2.05cm × 2.09cm** | #0086AB | - |
+| **スライド番号（四角内）** | 48.25cm, 25.98cm | 2.05cm × 2.09cm | 白文字 | 18pt, 中央 |
 
 ### ⚠️ よくある間違い
 
 | 間違い | 正解 |
 |--------|------|
 | 左上四角を「縦長バー」にする | **小さな正方形（2.05×2.09cm）** |
-| コピーライトを**左下**に配置 | **右下**（29.67cm, 26.73cm） |
+| コピーライトを**左下**に配置 | **右下**（27.0cm, 26.3cm） |
 | スライド番号をテキストのみで配置 | **ティール四角の中に白文字** |
 | inchで指定する | **cm単位で指定**（このプロンプトはcm基準） |
 
@@ -109,13 +109,13 @@ prs.slide_height = Cm(28.57)
 | 要素 | 位置 (left, top) | サイズ | フォント | 色 | 備考 |
 |------|------------------|--------|----------|-----|------|
 | **背景** | - | 全面 | - | **白 #FFFFFF** | ⚠️ ティール背景ではない |
-| **タイトル** | 7.3cm, 10.36cm | 36.2cm × 2.99cm | **48pt**, Spica Neue P Light | **#0086AB** | 太字、下線、中央 |
-| **水色ライン** | タイトル直下 | 幅30cm × **高さ0.15cm** | - | **#00B0F0** | 細いアクセント線 |
-| サブタイトル | 中央 | - | 24pt | #5F5F5F | 中央揃え |
-| 会社名 | 16.83cm, 19.07cm | 17.14cm × 2.65cm | **28pt**, Spica Neue P | #5F5F5F | 2行、中央 |
+| **タイトル** | 5.0cm, 8.0cm | 40.0cm × 4.0cm | **48pt**, Spica Neue P Light | **#0086AB** | 太字、下線、中央 |
+| **水色ライン** | 10.0cm, 12.5cm | 幅30cm × **高さ0.15cm** | - | **#00B0F0** | 細いアクセント線 |
+| サブタイトル | 5.0cm, 14.0cm | 40.0cm × 2.0cm | 24pt | #5F5F5F | 中央揃え |
+| 会社名 | 5.0cm, 18.0cm | 40.0cm × 4.0cm | **28pt**, Spica Neue P | #5F5F5F | 2行、中央揃え |
 | 左上四角 | -0.04cm, 1.64cm | 2.05cm × 2.09cm | - | #0086AB | 他スライドと同じ |
-| 右下四角+番号 | 47.34cm, 26.48cm | 2.05cm × 2.09cm | 18pt | #0086AB/白 | 他スライドと同じ |
-| コピーライト | 29.67cm, 26.73cm | 17.14cm × 1.52cm | 9pt | #808080 | 他スライドと同じ |
+| 右下四角+番号 | 48.25cm, 25.98cm | 2.05cm × 2.09cm | 18pt | #0086AB/白 | 他スライドと同じ |
+| コピーライト | 27.0cm, 26.3cm | 18.0cm × 1.0cm | 12pt | #808080 | 他スライドと同じ |
 
 ---
 
@@ -126,11 +126,15 @@ prs.slide_height = Cm(28.57)
 - [ ] スライドサイズは **50.8cm × 28.57cm** に設定したか？（標準16:9ではない）
 - [ ] 左上四角は **小さな正方形（2.05×2.09cm）** か？（縦長バーではない）
 - [ ] 左上四角の位置は **(-0.04cm, 1.64cm)** か？
-- [ ] コピーライトは **右下（29.67cm, 26.73cm）** に右寄せで配置したか？
+- [ ] コピーライトは **右下（27.0cm, 26.3cm）** に右寄せで配置したか？ サイズ **18.0×1.0cm**
+- [ ] 右下四角は **(48.25cm, 25.98cm)** に配置したか？ サイズ **2.05×2.09cm**
 - [ ] スライド番号は **ティール四角の中に白文字** で配置したか？
 - [ ] 表紙の背景は **白** か？（ティール全面ではない）
+- [ ] 表紙のタイトル位置は **(5.0cm, 8.0cm)** / サイズ **40.0×4.0cm** か？
 - [ ] 表紙のタイトルは **ティール文字** か？（白文字ではない）
-- [ ] 表紙にタイトル下の **水色アクセントライン（#00B0F0）** があるか？
+- [ ] 表紙にタイトル下の **水色アクセントライン（#00B0F0）** が **(10.0cm, 12.5cm)** にあるか？
+- [ ] 表紙の会社名は **(5.0cm, 18.0cm)** / サイズ **40.0×4.0cm** で中央揃えか？
+- [ ] 本編スライドのタイトル位置は **(3.0cm, 2.0cm)** / サイズ **44.0×2.5cm** か？
 - [ ] 単位は **cm** を使用しているか？（inchではない）
 
 ---
@@ -374,17 +378,17 @@ def add_common_elements(slide, slide_num):
     left.fill.fore_color.rgb = PRIMARY
     left.line.fill.background()
 
-    # コピーライト
-    cr = slide.shapes.add_textbox(Cm(27), Cm(26.3), Cm(18), Cm(1))
+    # コピーライト（M365_Detailed準拠: 27.0, 26.3cm / 18.0x1.0cm）
+    cr = slide.shapes.add_textbox(Cm(27.0), Cm(26.3), Cm(18.0), Cm(1.0))
     cr.text_frame.paragraphs[0].text = "Copyright© Arma & Asocciates, Ltd All Rights Reserved"
     cr.text_frame.paragraphs[0].font.size = Pt(12)
     cr.text_frame.paragraphs[0].font.color.rgb = GRAY
     cr.text_frame.paragraphs[0].alignment = PP_ALIGN.RIGHT
 
-    # スライド番号
+    # スライド番号（M365_Detailed準拠: 48.25, 25.98cm）
     num = slide.shapes.add_shape(
         MSO_SHAPE.RECTANGLE,
-        SLIDE_WIDTH - Cm(2.55), SLIDE_HEIGHT - Cm(2.59),
+        Cm(48.25), Cm(25.98),
         Cm(2.05), Cm(2.09)
     )
     num.fill.solid()
@@ -399,15 +403,15 @@ def add_common_elements(slide, slide_num):
 
 
 def add_slide_title(slide, title, subtitle=None):
-    """スライドタイトルを追加"""
-    tb = slide.shapes.add_textbox(Cm(3), Cm(2), Cm(44), Cm(2.5))
+    """スライドタイトルを追加（M365_Detailed準拠: 3.0, 2.0cm / 44.0x2.5cm）"""
+    tb = slide.shapes.add_textbox(Cm(3.0), Cm(2.0), Cm(44.0), Cm(2.5))
     tb.text_frame.paragraphs[0].text = title
     tb.text_frame.paragraphs[0].font.size = Pt(36)
     tb.text_frame.paragraphs[0].font.bold = True
     tb.text_frame.paragraphs[0].font.color.rgb = PRIMARY
 
     if subtitle:
-        sb = slide.shapes.add_textbox(Cm(3), Cm(4.2), Cm(44), Cm(1.5))
+        sb = slide.shapes.add_textbox(Cm(3.0), Cm(4.2), Cm(44.0), Cm(1.5))
         sb.text_frame.paragraphs[0].text = subtitle
         sb.text_frame.paragraphs[0].font.size = Pt(20)
         sb.text_frame.paragraphs[0].font.color.rgb = TEXT
@@ -570,35 +574,27 @@ def add_org_chart(slide, boxes):
 | 位置（縦） | **1.64cm** |
 | 色 | #0086AB |
 
-#### 右下エリア（2層構造）
+#### 右下エリア（スライド番号四角）
 
-**背景四角（下層）**
+**スライド番号ボックス**
 | 項目 | 値 |
 |------|-----|
 | 幅 | **2.05cm** |
 | 高さ | **2.09cm** |
-| 位置（横） | 47.34cm |
-| 位置（縦） | 26.48cm |
-| 色 | #0086AB |
-
-**スライド番号ボックス（上層）**
-| 項目 | 値 |
-|------|-----|
-| 幅 | **2.05cm** |
-| 高さ | **1.52cm** |
-| 位置（横） | 47.34cm |
-| 位置（縦） | 26.73cm |
+| 位置（横） | **48.25cm** |
+| 位置（縦） | **25.98cm** |
 | 背景色 | #0086AB |
 | 文字色 | 白 |
+| フォントサイズ | 18pt |
 
 #### Copyright表記（右下、スライド番号の左隣）
 | 項目 | 値 |
 |------|-----|
-| 幅 | **17.14cm** |
-| 高さ | **1.52cm** |
-| 位置（横） | 29.67cm |
-| 位置（縦） | 26.73cm |
-| フォントサイズ | 9pt |
+| 幅 | **18.0cm** |
+| 高さ | **1.0cm** |
+| 位置（横） | **27.0cm** |
+| 位置（縦） | **26.3cm** |
+| フォントサイズ | 12pt |
 | フォント | Spica Neue P |
 | 色 | グレー (#808080) |
 
@@ -611,10 +607,10 @@ def add_org_chart(slide, boxes):
 #### タイトル
 | 項目 | 値 |
 |------|-----|
-| 位置（横） | 7.3cm |
-| 位置（縦） | 10.36cm |
-| 幅 | 36.2cm |
-| 高さ | 2.99cm |
+| 位置（横） | **5.0cm** |
+| 位置（縦） | **8.0cm** |
+| 幅 | **40.0cm** |
+| 高さ | **4.0cm** |
 | フォントサイズ | **48pt** |
 | フォント | **Spica Neue P Light** |
 | 色 | #0086AB |
@@ -623,22 +619,23 @@ def add_org_chart(slide, boxes):
 #### 会社名
 | 項目 | 値 |
 |------|-----|
-| 位置（横） | 16.83cm |
-| 位置（縦） | 19.07cm |
-| 幅 | 17.14cm |
-| 高さ | 2.65cm |
+| 位置（横） | **5.0cm** |
+| 位置（縦） | **18.0cm** |
+| 幅 | **40.0cm** |
+| 高さ | **4.0cm** |
 | フォントサイズ | **28pt** |
 | フォント | **Spica Neue P** |
 | 色 | #5F5F5F |
+| 配置 | 中央揃え |
 
 ### 本編スライドタイトル
 | 項目 | 値 |
 |------|-----|
-| 位置（横） | 2.58cm |
-| 位置（縦） | 1.31cm |
-| 幅 | 46.35cm |
-| 高さ | 2.99cm |
-| フォントサイズ | **48pt** |
+| 位置（横） | **3.0cm** |
+| 位置（縦） | **2.0cm** |
+| 幅 | **44.0cm** |
+| 高さ | **2.5cm** |
+| フォントサイズ | **36pt** |
 | フォント | **Spica Neue P Light** |
 | 色 | #0086AB |
 
@@ -864,45 +861,45 @@ TEAL_SQUARE_HEIGHT = Cm(2.09)
 TEAL_SQUARE_LEFT = Cm(-0.04)  # 端からはみ出し
 TEAL_SQUARE_TOP = Cm(1.64)
 
-# ========== 右下背景四角 ==========
-BG_SQUARE_WIDTH = Cm(2.05)
-BG_SQUARE_HEIGHT = Cm(2.09)
-BG_SQUARE_LEFT = Cm(47.34)
-BG_SQUARE_TOP = Cm(26.48)
-
 # ========== 右下スライド番号ボックス ==========
 SLIDE_NUM_WIDTH = Cm(2.05)
-SLIDE_NUM_HEIGHT = Cm(1.52)
-SLIDE_NUM_LEFT = Cm(47.34)
-SLIDE_NUM_TOP = Cm(26.73)
+SLIDE_NUM_HEIGHT = Cm(2.09)
+SLIDE_NUM_LEFT = Cm(48.25)
+SLIDE_NUM_TOP = Cm(25.98)
 
 # ========== Copyright ==========
-COPYRIGHT_WIDTH = Cm(17.14)
-COPYRIGHT_HEIGHT = Cm(1.52)
-COPYRIGHT_LEFT = Cm(29.67)
-COPYRIGHT_TOP = Cm(26.73)
+COPYRIGHT_WIDTH = Cm(18.0)
+COPYRIGHT_HEIGHT = Cm(1.0)
+COPYRIGHT_LEFT = Cm(27.0)
+COPYRIGHT_TOP = Cm(26.3)
 
 # ========== タイトル ==========
 TITLE_FONT_SIZE = Pt(48)
 COMPANY_FONT_SIZE = Pt(28)
 
 # ========== 表紙タイトル位置 ==========
-COVER_TITLE_LEFT = Cm(7.3)
-COVER_TITLE_TOP = Cm(10.36)
-COVER_TITLE_WIDTH = Cm(36.2)
-COVER_TITLE_HEIGHT = Cm(2.99)
+COVER_TITLE_LEFT = Cm(5.0)
+COVER_TITLE_TOP = Cm(8.0)
+COVER_TITLE_WIDTH = Cm(40.0)
+COVER_TITLE_HEIGHT = Cm(4.0)
+
+# ========== 表紙サブタイトル位置 ==========
+COVER_SUBTITLE_LEFT = Cm(5.0)
+COVER_SUBTITLE_TOP = Cm(14.0)
+COVER_SUBTITLE_WIDTH = Cm(40.0)
+COVER_SUBTITLE_HEIGHT = Cm(2.0)
 
 # ========== 会社名位置 ==========
-COMPANY_LEFT = Cm(16.83)
-COMPANY_TOP = Cm(19.07)
-COMPANY_WIDTH = Cm(17.14)
-COMPANY_HEIGHT = Cm(2.65)
+COMPANY_LEFT = Cm(5.0)
+COMPANY_TOP = Cm(18.0)
+COMPANY_WIDTH = Cm(40.0)
+COMPANY_HEIGHT = Cm(4.0)
 
 # ========== 本編タイトル位置 ==========
-CONTENT_TITLE_LEFT = Cm(2.58)
-CONTENT_TITLE_TOP = Cm(1.31)
-CONTENT_TITLE_WIDTH = Cm(46.35)
-CONTENT_TITLE_HEIGHT = Cm(2.99)
+CONTENT_TITLE_LEFT = Cm(3.0)
+CONTENT_TITLE_TOP = Cm(2.0)
+CONTENT_TITLE_WIDTH = Cm(44.0)
+CONTENT_TITLE_HEIGHT = Cm(2.5)
 ```
 
 ---
@@ -914,7 +911,7 @@ CONTENT_TITLE_HEIGHT = Cm(2.99)
 1. PowerPoint「表示」→「スライドマスター」
 2. 左上にティール四角（2.05×2.09cm、位置: -0.04cm, 1.64cm）を配置
 3. 右下に背景四角（2.05×2.09cm）とスライド番号ボックス（2.05×1.52cm）を配置
-4. 下部にCopyright表記（17.14×1.52cm、位置: 29.67cm, 26.73cm）を配置
+4. 下部にCopyright表記（18.0×1.0cm、位置: 27.0cm, 26.3cm）を配置
 5. マスターを閉じると全スライドに自動適用
 
 ### フォント設定
@@ -939,7 +936,8 @@ CONTENT_TITLE_HEIGHT = Cm(2.99)
 | 1.7.0 | 2026-01-28 | 図解テンプレート追加（体制図・ガントチャート・比較表）、M365提案書フルテンプレート追加 |
 | 1.8.0 | 2026-01-28 | 視覚要素拡充（用語定義表・KPIボックス・Before/After・プロセスフロー・アイコンリスト） |
 | 1.9.0 | 2026-01-28 | 汎用ビジネス提案書テンプレート追加（20枚構成、任意のテーマに対応、フォントサイズ20pt以上、プロンプト例、Python関数） |
-| **2.0.0** | **2026-01-29** | **⚠️ CRITICAL REQUIREMENTS セクション追加: スライドサイズ必須仕様(50.8×28.57cm)、共通レイアウト要素の視覚的配置図、表紙デザインの正誤比較、実装前チェックリスト、よくある間違いの明記。AI実装時の誤解を防止するための重要な仕様を最優先セクションとして追加** |
+| 2.0.0 | 2026-01-29 | CRITICAL REQUIREMENTS セクション追加: スライドサイズ必須仕様(50.8×28.57cm)、共通レイアウト要素の視覚的配置図、表紙デザインの正誤比較、実装前チェックリスト、よくある間違いの明記 |
+| **2.1.0** | **2026-01-29** | **⚠️ M365_Detailed.pptx完全準拠: 全位置情報を実ファイルから抽出して修正。Copyright(27.0,26.3/18x1cm)、右下四角(48.25,25.98cm)、表紙タイトル(5.0,8.0/40x4cm)、表紙会社名(5.0,18.0/40x4cm)、本編タイトル(3.0,2.0/44x2.5cm)** |
 
 ---
 
@@ -1246,15 +1244,23 @@ CARD_BORDER = RGBColor(220, 225, 230)      # カード枠線
 SLIDE_WIDTH = Cm(50.8)
 SLIDE_HEIGHT = Cm(28.57)
 
-# 右下の四角サイズ（幅2.05cm、高さ2.09cm）
+# 右下の四角サイズ（M365_Detailed準拠）
 NUM_BOX_WIDTH = Cm(2.05)
 NUM_BOX_HEIGHT = Cm(2.09)
+NUM_BOX_X = Cm(48.25)
+NUM_BOX_Y = Cm(25.98)
 
 # 左上の四角（全スライド共通）
 LEFT_BOX_X = Cm(-0.04)
 LEFT_BOX_Y = Cm(1.64)
 LEFT_BOX_W = Cm(2.05)
 LEFT_BOX_H = Cm(2.09)
+
+# コピーライト（M365_Detailed準拠）
+COPYRIGHT_X = Cm(27.0)
+COPYRIGHT_Y = Cm(26.3)
+COPYRIGHT_W = Cm(18.0)
+COPYRIGHT_H = Cm(1.0)
 
 
 def create_presentation():
@@ -1265,7 +1271,7 @@ def create_presentation():
 
 
 def add_common_elements(slide, slide_num):
-    """全スライド共通の要素を追加"""
+    """全スライド共通の要素を追加（M365_Detailed準拠）"""
     # 左上のティール四角（全スライド共通サイズ）
     left_box = slide.shapes.add_shape(
         MSO_SHAPE.RECTANGLE,
@@ -1276,24 +1282,22 @@ def add_common_elements(slide, slide_num):
     left_box.fill.fore_color.rgb = PRIMARY_COLOR
     left_box.line.fill.background()
 
-    # コピーライト（右下、スライド番号の左側・右寄せ）
+    # コピーライト（M365_Detailed準拠: 27.0, 26.3cm / 18.0x1.0cm）
     copyright_box = slide.shapes.add_textbox(
-        Cm(27), Cm(26.3), Cm(18), Cm(1)
+        COPYRIGHT_X, COPYRIGHT_Y, COPYRIGHT_W, COPYRIGHT_H
     )
     tf = copyright_box.text_frame
     p = tf.paragraphs[0]
     p.text = "Copyright© Arma & Asocciates, Ltd All Rights Reserved"
-    p.font.size = Pt(10)
+    p.font.size = Pt(12)
     p.font.color.rgb = FOOTER_COLOR
     p.alignment = PP_ALIGN.RIGHT
 
-    # 右下のスライド番号ボックス
+    # 右下のスライド番号ボックス（M365_Detailed準拠: 48.25, 25.98cm）
     num_box = slide.shapes.add_shape(
         MSO_SHAPE.RECTANGLE,
-        SLIDE_WIDTH - NUM_BOX_WIDTH - Cm(0.5),
-        SLIDE_HEIGHT - NUM_BOX_HEIGHT - Cm(0.5),
-        NUM_BOX_WIDTH,
-        NUM_BOX_HEIGHT
+        NUM_BOX_X, NUM_BOX_Y,
+        NUM_BOX_WIDTH, NUM_BOX_HEIGHT
     )
     num_box.fill.solid()
     num_box.fill.fore_color.rgb = PRIMARY_COLOR
@@ -1304,65 +1308,65 @@ def add_common_elements(slide, slide_num):
     tf.anchor = MSO_ANCHOR.MIDDLE
     p = tf.paragraphs[0]
     p.text = str(slide_num)
-    p.font.size = Pt(16)
+    p.font.size = Pt(18)
     p.font.bold = True
     p.font.color.rgb = WHITE
     p.alignment = PP_ALIGN.CENTER
 
 
 def add_cover_slide(prs, title, subtitle):
-    """表紙スライド（モダンデザイン）"""
+    """表紙スライド（M365_Detailed準拠）"""
     blank_layout = prs.slide_layouts[6]
     slide = prs.slides.add_slide(blank_layout)
 
     add_common_elements(slide, 1)
 
-    # タイトル（中央、ティール色）
+    # タイトル（M365_Detailed準拠: 5.0, 8.0cm / 40.0x4.0cm）
     title_box = slide.shapes.add_textbox(
-        Cm(5), Cm(9), Cm(40), Cm(3)
+        Cm(5.0), Cm(8.0), Cm(40.0), Cm(4.0)
     )
     tf = title_box.text_frame
     p = tf.paragraphs[0]
     p.text = title
-    p.font.size = Pt(44)
+    p.font.size = Pt(48)
     p.font.bold = True
     p.font.color.rgb = PRIMARY_COLOR
     p.alignment = PP_ALIGN.CENTER
 
-    # タイトル下の水色アクセントライン
+    # タイトル下の水色アクセントライン（M365_Detailed準拠: 10.0, 12.5cm）
     line = slide.shapes.add_shape(
         MSO_SHAPE.RECTANGLE,
-        Cm(10), Cm(12.5), Cm(30), Cm(0.12)
+        Cm(10.0), Cm(12.5), Cm(30.0), Cm(0.15)
     )
     line.fill.solid()
     line.fill.fore_color.rgb = LIGHT_BLUE
     line.line.fill.background()
 
-    # サブタイトル
+    # サブタイトル（M365_Detailed準拠: 5.0, 14.0cm / 40.0x2.0cm）
     sub_box = slide.shapes.add_textbox(
-        Cm(5), Cm(13.5), Cm(40), Cm(2)
+        Cm(5.0), Cm(14.0), Cm(40.0), Cm(2.0)
     )
     tf = sub_box.text_frame
     p = tf.paragraphs[0]
     p.text = subtitle
-    p.font.size = Pt(18)
+    p.font.size = Pt(24)
     p.font.color.rgb = TEXT_COLOR
     p.alignment = PP_ALIGN.CENTER
 
-    # 会社名（中央下）
+    # 会社名（M365_Detailed準拠: 5.0, 18.0cm / 40.0x4.0cm）
     company_box = slide.shapes.add_textbox(
-        Cm(5), Cm(18), Cm(40), Cm(4)
+        Cm(5.0), Cm(18.0), Cm(40.0), Cm(4.0)
     )
     tf = company_box.text_frame
     p = tf.paragraphs[0]
     p.text = "大野公認会計士・税理士事務所"
-    p.font.size = Pt(18)
+    p.font.size = Pt(28)
     p.font.color.rgb = TEXT_COLOR
     p.alignment = PP_ALIGN.CENTER
 
     p2 = tf.add_paragraph()
     p2.text = "（株）アルマ"
-    p2.font.size = Pt(18)
+    p2.font.size = Pt(28)
     p2.font.color.rgb = TEXT_COLOR
     p2.alignment = PP_ALIGN.CENTER
 
@@ -1428,20 +1432,20 @@ def add_card(slide, x, y, width, height, number, title, description):
 
 
 def add_agenda_slide(prs, items):
-    """目次スライド（モダンカードデザイン）"""
+    """目次スライド（M365_Detailed準拠）"""
     blank_layout = prs.slide_layouts[6]
     slide = prs.slides.add_slide(blank_layout)
 
     add_common_elements(slide, 2)
 
-    # タイトル
+    # タイトル（M365_Detailed準拠: 3.0, 2.0cm / 44.0x2.5cm）
     title_box = slide.shapes.add_textbox(
-        Cm(3), Cm(2), Cm(44), Cm(2.5)
+        Cm(3.0), Cm(2.0), Cm(44.0), Cm(2.5)
     )
     tf = title_box.text_frame
     p = tf.paragraphs[0]
     p.text = "本日お話しすること"
-    p.font.size = Pt(32)
+    p.font.size = Pt(36)
     p.font.bold = True
     p.font.color.rgb = PRIMARY_COLOR
 
